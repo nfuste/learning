@@ -2,23 +2,25 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/nfuste/learning/expenses"
 )
 
 func main() {
 
-	todayexpenses := Expenses{
-		name:   "meal",
-		amount: 12.5,
+	todayexpenses := expenses.Expenses{
+		Name:   "meal",
+		Amount: 12.5,
 	}
 
-	yesterdayexpenses := Expenses{
-		name:   "present",
-		amount: 20.0,
+	yesterdayexpenses := expenses.Expenses{
+		Name:   "present",
+		Amount: 20.0,
 	}
 
-	totalexpenses := todayexpenses.amount + yesterdayexpenses.amount
+	totalexpenses := todayexpenses.Amount + yesterdayexpenses.Amount
 
-	fmt.Println("Today you have spent:", todayexpenses.amount, "in", todayexpenses.name)
-	fmt.Println("Yesterday you spent:", yesterdayexpenses.amount, "in", yesterdayexpenses.name)
+	fmt.Println("Today you have spent:", todayexpenses.Amount, "in", todayexpenses.Name)
+	fmt.Println("Yesterday you spent:", yesterdayexpenses.Amount, "in", yesterdayexpenses.Name)
 	fmt.Println("Total spent this month:", totalexpenses)
 }
