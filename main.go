@@ -16,5 +16,14 @@ func main() {
 		amount: 12.5,
 	}
 
+	yesterdayexpenses := Expenses{
+		name:   "present",
+		amount: 20.0,
+	}
+
+	totalexpenses := todayexpenses.amount + yesterdayexpenses.amount
+
 	fmt.Println("Today you have spent:", todayexpenses.amount, "in", todayexpenses.name)
+	fmt.Println("Yesterday you spent:", yesterdayexpenses.amount, "in", yesterdayexpenses.name)
+	fmt.Println("Total spent this month:", totalexpenses)
 }
