@@ -23,4 +23,10 @@ func main() {
 	fmt.Println("Today you have spent:", todayexpenses.Amount, "in", todayexpenses.Name)
 	fmt.Println("Yesterday you spent:", yesterdayexpenses.Amount, "in", yesterdayexpenses.Name)
 	fmt.Println("Total spent this month:", totalexpenses)
+
+	if totalexpenses > 10 {
+		fmt.Println("Mmm... looks like you have spent a lot")
+	} else {
+		fmt.Println("Great job! You have spent little money")
+	}
 }
